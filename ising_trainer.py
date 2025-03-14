@@ -70,4 +70,5 @@ class PairwiseIsingModelTrainer:
             if epoch_callback is not None:
                 ctx = TrainingContext(epoch, epochs, loss=loss, model=self.ising_model, l2_loss=l2_loss, kl_loss=kl_loss)
                 epoch_callback(ctx)
+                
         return self.ising_model
